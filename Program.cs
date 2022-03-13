@@ -1,2 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+Array numbers = new Array(5);
+numbers.insert(1);
+numbers.insert(15);
+numbers.insert(16);
+numbers.insert(17);
+numbers.insert(18);
+numbers.insert(19);
+numbers.insert(20);
+numbers.removeAt(3);
+Console.WriteLine($"the index is: {numbers.indexOf(15)}");
+Console.WriteLine($"the max is: {numbers.max()}");
+Array other = new Array(3);
+other.bulkInsert(15, 16, 17);
+Console.WriteLine($"the intersected items are:");
+numbers.intersect(other).print();
+Console.WriteLine("---------------------------");
+numbers.print();
+Console.WriteLine("Reversed:");
+Array reversed = numbers.reverse();
+reversed.insertAt(5, 5);
+reversed.print();
