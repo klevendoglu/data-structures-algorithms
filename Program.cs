@@ -19,17 +19,25 @@
 // reversed.insertAt(5, 5);
 // reversed.print();
 
-LinkedList numbers = new LinkedList();
-numbers.addFirst(22);
-numbers.addFirst(25);
-numbers.addFirst(27);
-numbers.addFirst(33);
-numbers.addFirst(44);
-numbers.removeLast();
-Console.WriteLine(numbers.indexOf(22));
-Console.WriteLine(numbers.contains(22));
-Console.WriteLine(numbers.size());
-numbers.reverse();
-Console.WriteLine(string.Join("-", numbers.toArray()));
-Console.WriteLine(numbers.printMiddle());
-Console.WriteLine(numbers.hasLoop());
+// LinkedList numbers = new LinkedList();
+// numbers.addFirst(22);
+// numbers.addFirst(25);
+// numbers.addFirst(27);
+// numbers.addFirst(33);
+// numbers.addFirst(44);
+// numbers.removeLast();
+// Console.WriteLine(numbers.indexOf(22));
+// Console.WriteLine(numbers.contains(22));
+// Console.WriteLine(numbers.size());
+// numbers.reverse();
+// Console.WriteLine(string.Join("-", numbers.toArray()));
+// Console.WriteLine(numbers.printMiddle());
+// Console.WriteLine(numbers.hasLoop());
+
+using System.Linq.Expressions;
+
+StringReverserWithStack stack = new StringReverserWithStack();
+Console.WriteLine(stack.reverse("Tjokkenroll"));
+
+ExpressionWithStack expression = new ExpressionWithStack();
+Console.WriteLine(expression.isBalanced("(1+2)"));
