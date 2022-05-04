@@ -34,10 +34,36 @@
 // Console.WriteLine(numbers.printMiddle());
 // Console.WriteLine(numbers.hasLoop());
 
-using System.Linq.Expressions;
+// StringReverserWithStack stack = new StringReverserWithStack();
+// Console.WriteLine(stack.reverse("Tjokkenroll"));
 
-StringReverserWithStack stack = new StringReverserWithStack();
-Console.WriteLine(stack.reverse("Tjokkenroll"));
+// ExpressionWithStack expression = new ExpressionWithStack();
+// Console.WriteLine(expression.isBalanced("(1+2)"));
 
-ExpressionWithStack expression = new ExpressionWithStack();
-Console.WriteLine(expression.isBalanced("(1+2)"));
+// Stack stack = new Stack();
+// stack.push(10);
+// stack.push(20);
+// stack.push(30);
+// stack.pop();
+// stack.pop();
+// Console.WriteLine(stack.peek());
+//stack.print();
+
+// TwoStacks stack = new TwoStacks(10);
+// stack.push1(11);
+// stack.push1(12);
+// stack.push1(13);
+// stack.push2(22);
+// stack.push2(23);
+// stack.push2(24);
+// Console.WriteLine(stack.pop1());
+// Console.WriteLine(stack.pop2());
+
+MinStack stack = new MinStack();
+stack.push(1);
+stack.push(11);
+stack.push(12);
+stack.push(10);
+stack.push(17);
+stack.pop();
+Console.WriteLine(stack.min());
