@@ -55,6 +55,12 @@ public class Array
 
         return max;
     }
+    
+    //O(1) operation.
+    public int[] getItems()
+    {
+        return items;
+    }
 
     //O(n) operation.
     public Array intersect(Array itemsToIntersect)

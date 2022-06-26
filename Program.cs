@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Collections;
+
+// See https://aka.ms/new-console-template for more information
 // Array numbers = new Array(5);
 // numbers.insert(1);
 // numbers.insert(15);
@@ -59,11 +61,82 @@
 // Console.WriteLine(stack.pop1());
 // Console.WriteLine(stack.pop2());
 
-MinStack stack = new MinStack();
-stack.push(1);
-stack.push(11);
-stack.push(12);
-stack.push(10);
-stack.push(17);
-stack.pop();
-Console.WriteLine(stack.min());
+// MinStack stack = new MinStack();
+// stack.push(1);
+// stack.push(11);
+// stack.push(12);
+// stack.push(10);
+// stack.push(17);
+// stack.pop();
+// Console.WriteLine(stack.min());
+
+// Queue<int> queue = new Queue<int>();
+// queue.Enqueue(1);
+// queue.Enqueue(2);
+// queue.Enqueue(3);
+
+// QueueReverser reverser = new QueueReverser();
+// reverser.reverse(queue);
+// reverser.print(queue);
+
+// ArrayQueue queue = new ArrayQueue(5);
+// queue.enqueue(5);
+// queue.enqueue(10);
+// queue.enqueue(15);
+// var front = queue.dequeue();
+// queue.enqueue(20);
+// queue.enqueue(25);
+// queue.enqueue(30);
+// Console.WriteLine(front);
+// Console.WriteLine(queue);
+
+// QueueWithTwoStacks queue = new QueueWithTwoStacks();
+// queue.enqueue(10);
+// queue.enqueue(20);
+// queue.enqueue(30);
+
+// queue.dequeue();
+// queue.dequeue();
+// var item = queue.dequeue();
+// Console.WriteLine(item);
+
+// PriorityQueue queue = new PriorityQueue(5);
+// queue.add(5);
+// queue.add(3);
+// queue.add(1);
+// queue.add(4);
+// queue.add(6);
+// queue.add(8);
+// queue.add(1);
+// Console.WriteLine(queue.ToString());
+
+// while (!queue.isEmpty())
+//     Console.WriteLine(queue.remove());
+
+// Queue<int> queue = new Queue<int>(5);
+// queue.Enqueue(5);
+// queue.Enqueue(3);
+// queue.Enqueue(1);
+// queue.Enqueue(4);
+// queue.Enqueue(6);
+// queue.Enqueue(8);
+// queue.Enqueue(1);
+
+// QueueReverser reverser = new QueueReverser();
+// reverser.reverseByKth(queue, 6);
+// reverser.print(queue);
+
+// LinkedListQueue queue = new LinkedListQueue();
+// queue.enqueue(2);
+// queue.enqueue(5);
+// queue.enqueue(7);
+// queue.dequeue();
+// Console.WriteLine(queue.toString());
+
+StackWithTwoQueues queue = new StackWithTwoQueues();
+queue.push(5);
+queue.push(9);
+queue.push(6);
+queue.push(1);
+queue.pop();
+Console.WriteLine(queue.ToString());
