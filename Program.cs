@@ -133,10 +133,16 @@
 // queue.dequeue();
 // Console.WriteLine(queue.toString());
 
-StackWithTwoQueues queue = new StackWithTwoQueues();
-queue.push(5);
-queue.push(9);
-queue.push(6);
-queue.push(1);
-queue.pop();
-Console.WriteLine(queue.ToString());
+// StackWithTwoQueues queue = new StackWithTwoQueues();
+// queue.push(5);
+// queue.push(9);
+// queue.push(6);
+// queue.push(1);
+// queue.pop();
+// Console.WriteLine(queue.ToString());
+
+// CharFinder finder = new CharFinder();
+// Console.WriteLine(finder.findFirstNonRepeatingChar("a green valley"));
+
+CharFinder finder = new CharFinder();
+Console.WriteLine(finder.findFirstRepeatingChar("green valley"));
