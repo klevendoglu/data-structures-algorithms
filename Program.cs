@@ -144,5 +144,12 @@
 // CharFinder finder = new CharFinder();
 // Console.WriteLine(finder.findFirstNonRepeatingChar("a green valley"));
 
-CharFinder finder = new CharFinder();
-Console.WriteLine(finder.findFirstRepeatingChar("green valley"));
+// CharFinder finder = new CharFinder();
+// Console.WriteLine(finder.findFirstRepeatingChar("green valley"));
+
+Dictionary dictionary = new Dictionary();
+dictionary.put(6, "A");
+dictionary.put(8, "B");
+dictionary.put(11, "C");
+dictionary.put(6, "A+");
+Console.WriteLine(dictionary.get(6));
