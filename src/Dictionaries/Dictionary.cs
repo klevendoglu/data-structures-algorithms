@@ -16,39 +16,61 @@ public class Dictionary
 
     public void put(int key, string value)
     {
-        var index = hash(key);
-
-        if (entries[index] == null)
-            entries[index] = new LinkedList<Entry>();
-
-        var bucket = entries[index];
-        for (int i = 0; i < bucket.Count; i++)
+        var entry = GetEntry(key);
+        if (entry != null)
         {
-            var entry = bucket.ElementAt(i);
-            if (entry.key == key)
-                entry.value = value;
-
+            entry.value = value;
             return;
         }
 
-        bucket.AddLast(new Entry(key, value));
+        GetOrCreateBucket(key).AddLast(new Entry(key, value));
     }
 
     public string get(int key)
     {
+        var entry = GetEntry(key);
+
+        return entry != null ? entry.value : string.Empty;
+    }
+
+    public void remove(int key)
+    {
+        var entry = GetEntry(key);
+        if (entry == null) throw new Exception("Item not found!");
+
+        GetBucket(key).Remove(entry);
+    }
+
+    private LinkedList<Entry> GetBucket(int key)
+    {
+        return entries[hash(key)];
+    }
+
+    private LinkedList<Entry> GetOrCreateBucket(int key)
+    {
         var index = hash(key);
         var bucket = entries[index];
-        if (bucket == null) return null;
 
-        var value = "";
-        for (int i = 0; i < bucket.Count; i++)
+        if (bucket == null)
+            bucket = new LinkedList<Entry>();
+
+        return bucket;
+    }
+
+    private Entry GetEntry(int key)
+    {
+        var bucket = GetBucket(key);
+        if (bucket != null)
         {
-            var entry = bucket.ElementAt(i);
-            if (entry.key == key)
-                value = entry.value;
+            for (int i = 0; i < bucket.Count; i++)
+            {
+                var entry = bucket.ElementAt(i);
+                if (entry.key == key)
+                    return entry;
+            }
         }
 
-        return value;
+        return null;
     }
 
     private int hash(int key)
