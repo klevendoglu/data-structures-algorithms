@@ -155,7 +155,15 @@
 // dictionary.remove(6);
 // Console.WriteLine(dictionary.get(8));
 
-DictionaryExercises dictionary = new DictionaryExercises();
+// DictionaryExercises dictionary = new DictionaryExercises();
 // Console.WriteLine(dictionary.FindMostFrequent(new int[] { 1, 2, 2, 3, 3, 3, 4 }));
 // Console.WriteLine(dictionary.CountPairsWithDiff(new int[] { 1, 7, 5, 9, 2, 12, 3 }, 2));
-Console.WriteLine(string.Join("-", dictionary.twoSum(new int[] { 2, 7, 11, 15 }, 9)));
+// Console.WriteLine(string.Join("-", dictionary.twoSum(new int[] { 2, 7, 11, 15 }, 9)));
+
+HashMap hashMap = new HashMap();
+hashMap.Put(8, "B");
+hashMap.Put(6, "A");
+hashMap.Put(11, "C");
+hashMap.Put(8, "A+");
+hashMap.Remove(6);
+Console.WriteLine(hashMap.ToString());
