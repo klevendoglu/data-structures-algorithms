@@ -160,10 +160,22 @@
 // Console.WriteLine(dictionary.CountPairsWithDiff(new int[] { 1, 7, 5, 9, 2, 12, 3 }, 2));
 // Console.WriteLine(string.Join("-", dictionary.twoSum(new int[] { 2, 7, 11, 15 }, 9)));
 
-HashMap hashMap = new HashMap();
-hashMap.Put(8, "B");
-hashMap.Put(6, "A");
-hashMap.Put(11, "C");
-hashMap.Put(8, "A+");
-hashMap.Remove(6);
-Console.WriteLine(hashMap.ToString());
+// HashMap hashMap = new HashMap();
+// hashMap.Put(8, "B");
+// hashMap.Put(6, "A");
+// hashMap.Put(11, "C");
+// hashMap.Put(8, "A+");
+// hashMap.Remove(6);
+// Console.WriteLine(hashMap.ToString());
+
+Tree tree = new Tree();
+tree.Insert(7);
+tree.Insert(4);
+tree.Insert(9);
+tree.Insert(1);
+tree.Insert(6);
+tree.Insert(8);
+tree.Insert(10);
+Console.WriteLine("Done");
+Console.WriteLine(tree.find(6));
+Console.WriteLine(tree.find(11));
