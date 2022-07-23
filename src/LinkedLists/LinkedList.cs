@@ -196,7 +196,7 @@ public class LinkedList
         var current = first;
         while (current != null)
         {
-            if (current.next.value == last.value)
+            if (current.next.value == node.value)
                 return current;
 
             current = current.next;
