@@ -167,3 +167,16 @@
 // hashMap.Put(8, "A+");
 // hashMap.Remove(6);
 // Console.WriteLine(hashMap.ToString());
+// Console.WriteLine(hashMap.ToString());
+
+Tree tree = new Tree();
+tree.Insert(7);
+tree.Insert(4);
+tree.Insert(9);
+tree.Insert(1);
+tree.Insert(6);
+tree.Insert(8);
+tree.Insert(10);
+Console.WriteLine("Done");
+Console.WriteLine(tree.find(6));
+Console.WriteLine(tree.find(11));
