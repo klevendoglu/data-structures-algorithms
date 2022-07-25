@@ -195,12 +195,18 @@ tree.Insert(10);
 // Console.WriteLine("Height: " + tree.Height());
 // Console.WriteLine("Min: " + tree.Min());
 
-Tree tree2 = new Tree();
-tree2.Insert(7);
-tree2.Insert(4);
-tree2.Insert(9);
-tree2.Insert(1);
-tree2.Insert(6);
-tree2.Insert(8);
-// tree2.Insert(10);
-Console.WriteLine(tree2.Equals(tree));
+Tree other = new Tree();
+other.Insert(7);
+other.Insert(4);
+other.Insert(9);
+other.Insert(1);
+other.Insert(6);
+other.Insert(8);
+other.Insert(10);
+// other.SwapRoot();
+// Console.WriteLine(other.Equals(tree));
+// Console.WriteLine(other.IsBinarySearchTree());
+
+// var nodes = other.GetNodesAtDistance(1);
+// for (int i = 0; i < nodes.Count; i++)
+//     Console.WriteLine(nodes[i]);

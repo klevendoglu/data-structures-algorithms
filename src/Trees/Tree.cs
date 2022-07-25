@@ -147,6 +147,50 @@ public class Tree
         return false;
     }
 
+    public void SwapRoot()
+    {
+        var temp = root.LeftChild;
+        root.LeftChild = root.RightChild;
+        root.RightChild = temp;
+    }
+
+    public bool IsBinarySearchTree()
+    {
+        return isBinarySearchTree(root, int.MinValue, int.MaxValue);
+    }
+
+    private bool isBinarySearchTree(Node root, int min, int max)
+    {
+        if (root == null) return true;
+
+        if (root.Value < min || root.Value > max) return false;
+
+        return isBinarySearchTree(root.LeftChild, min, root.Value - 1) &&
+                isBinarySearchTree(root.RightChild, root.Value + 1, max);
+    }
+
+    public List<int> GetNodesAtDistance(int distance)
+    {
+        List<int> list = new List<int>();
+        getNodesAtDistance(root, distance, list);
+
+        return list;
+    }
+
+    private void getNodesAtDistance(Node root, int distance, List<int> toReturnList)
+    {
+        if (root == null) return;
+
+        if (distance == 0)
+        {
+            toReturnList.Add(root.Value);
+            return;
+        }
+
+        getNodesAtDistance(root.LeftChild, distance - 1, toReturnList);
+        getNodesAtDistance(root.RightChild, distance - 1, toReturnList);
+    }
+
     public int Min()
     {
         return min(root);
