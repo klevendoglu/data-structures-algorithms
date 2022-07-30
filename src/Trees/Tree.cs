@@ -191,6 +191,16 @@ public class Tree
         getNodesAtDistance(root.RightChild, distance - 1, toReturnList);
     }
 
+    public void TraverseLevelOrder()
+    {
+        for (int i = 0; i <= height(root); i++)
+        {
+            var list = GetNodesAtDistance(i);
+            for (int j = 0; j < list.Count; j++)
+                Console.WriteLine(list[j]);
+        }
+    }
+
     public int Min()
     {
         return min(root);
@@ -205,6 +215,114 @@ public class Tree
         var right = min(node.RightChild);
 
         return Math.Min(Math.Min(left, right), root.Value);
+    }
+
+    public int Max()
+    {
+        if (root == null)
+            throw new Exception("Root cannot be null");
+
+        return max(root);
+    }
+
+    //O(log n) operation.
+    private int max(Node root)
+    {
+        if (root.RightChild == null)
+            return root.Value;
+
+        return max(root.RightChild);
+    }
+
+    public int Size()
+    {
+        return size(root);
+    }
+
+    private int size(Node node)
+    {
+        if (node == null) return 0;
+
+        if (isLeaf(node)) return 1;
+
+        return 1 + size(node.LeftChild) + size(node.RightChild);
+    }
+
+    public int CountLeaves()
+    {
+        return countLeaves(root);
+    }
+
+    private int countLeaves(Node node)
+    {
+        if (node == null)
+            return 0;
+
+        if (isLeaf(node))
+            return 1;
+
+        return countLeaves(node.LeftChild) + countLeaves(node.RightChild);
+    }
+
+    public bool Contains(int value)
+    {
+        return contains(root, value);
+    }
+
+    private bool contains(Node node, int value)
+    {
+        if (node == null) return false;
+
+        if (node.Value == value) return true;
+
+        return contains(node.LeftChild, value) || contains(node.RightChild, value);
+    }
+
+    public bool AreSibling(int first, int second)
+    {
+        return areSibling(root, first, second);
+    }
+
+    private bool areSibling(Node node, int first, int second)
+    {
+        if (node == null)
+            return false;
+
+        var areSiblings = false;
+        if (node.LeftChild != null && node.RightChild != null)
+        {
+            areSiblings = (node.LeftChild.Value == first && node.RightChild.Value == second) ||
+                         (node.RightChild.Value == first && node.LeftChild.Value == second);
+        }
+
+        return areSiblings ||
+        areSibling(node.LeftChild, first, second) ||
+        areSibling(node.RightChild, first, second);
+    }
+
+    public List<int> getAncestors(int value)
+    {
+        var list = new List<int>();
+        getAncestors(root, value, list);
+        return list;
+    }
+
+    private bool getAncestors(Node root, int value, List<int> list)
+    {
+        if (root == null)
+            return false;
+
+        if (root.Value == value)
+            return true;
+
+        if (getAncestors(root.LeftChild, value, list) ||
+            getAncestors(root.RightChild, value, list))
+        {
+            list.Add(root.Value);
+            return true;
+        }
+
+        return false;
     }
 
     private bool isLeaf(Node node)
