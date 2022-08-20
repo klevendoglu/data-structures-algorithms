@@ -181,19 +181,19 @@
 // Console.WriteLine(tree.find(6));
 // Console.WriteLine(tree.find(11));
 
-Tree tree = new Tree();
-tree.Insert(7);
-tree.Insert(4);
-tree.Insert(9);
-tree.Insert(1);
-tree.Insert(6);
-tree.Insert(8);
-tree.Insert(10);
-tree.Insert(11);
-tree.Insert(12);
-tree.Insert(13);
-tree.Insert(14);
-tree.Insert(15);
+// Tree tree = new Tree();
+// tree.Insert(7);
+// tree.Insert(4);
+// tree.Insert(9);
+// tree.Insert(1);
+// tree.Insert(6);
+// tree.Insert(8);
+// tree.Insert(10);
+// tree.Insert(11);
+// tree.Insert(12);
+// tree.Insert(13);
+// tree.Insert(14);
+// tree.Insert(15);
 // tree.TraversePreOrder();
 // tree.TraverseInOrder();
 // tree.TraversePostOrder();
@@ -225,3 +225,44 @@ tree.Insert(15);
 // var nodes = other.GetNodesAtDistance(1);
 // for (int i = 0; i < nodes.Count; i++)
 //     Console.WriteLine(nodes[i]);
+
+// AVLTree tree = new AVLTree();
+// tree.Insert(10);
+// tree.Insert(30);
+// tree.Insert(20);
+// tree.Insert(5);
+
+// Heap heap = new Heap(10);
+// heap.Insert(10);
+// heap.Insert(5);
+// heap.Insert(17);
+// heap.Insert(4);
+// heap.Insert(22);
+// heap.remove();
+// Console.WriteLine(string.Join(",", heap.GetItems()));
+
+// var numbers = new int[] { 3, 8, 12, 16, 22, 37 };
+// Heap heapSortDesc = new Heap(numbers.Length);
+// for (int i = 0; i < numbers.Length; i++)
+//     heapSortDesc.Insert(numbers[i]);
+
+// for (int i = 0; i < numbers.Length; i++)
+//     numbers[i] = heapSortDesc.remove();
+
+// Console.WriteLine(string.Join(",", numbers));
+
+// Heap heapSortAsc = new Heap(numbers.Length);
+
+// for (int i = 0; i < numbers.Length; i++)
+//     heapSortAsc.Insert(numbers[i]);
+
+// for (int i = numbers.Length - 1; i >= 0; i--)
+//     numbers[i] = heapSortAsc.remove();
+
+// Console.WriteLine(string.Join(",", numbers));
+
+var numbers = new int[] { 5, 3, 8, 4, 1, 2 };
+MaxHeap.Heapify(numbers);
+// Console.WriteLine(string.Join(",", numbers));
+
+Console.WriteLine("Largest KTH: " + MaxHeap.GetLargestKth(numbers, 2));
