@@ -137,4 +137,29 @@ public class Heap
     {
         return items[0];
     }
+
+    public bool IsMaxHeap(int[] array)
+    {
+        return isMaxHeap(array, 0);
+    }
+
+    private bool isMaxHeap(int[] array, int index)
+    {
+        // All leaf nodes are valid
+        var lastParentIndex = (array.Length - 2) / 2;
+        if (index > lastParentIndex)
+            return true;
+
+        var leftChildIndex = index * 2 + 1;
+        var rightChildIndex = index * 2 + 2;
+
+        var isValidParent =
+            array[index] >= array[leftChildIndex] &&
+            array[index] >= array[rightChildIndex];
+
+        return isValidParent &&
+                isMaxHeap(array, leftChildIndex) &&
+                isMaxHeap(array, rightChildIndex);
+    }
+
 }

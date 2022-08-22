@@ -261,8 +261,17 @@
 
 // Console.WriteLine(string.Join(",", numbers));
 
-var numbers = new int[] { 5, 3, 8, 4, 1, 2 };
-MaxHeap.Heapify(numbers);
+// var numbers = new int[] { 5, 3, 8, 4, 1, 2 };
+// MaxHeap.Heapify(numbers);
 // Console.WriteLine(string.Join(",", numbers));
 
-Console.WriteLine("Largest KTH: " + MaxHeap.GetLargestKth(numbers, 2));
+// Console.WriteLine("Largest KTH: " + MaxHeap.GetLargestKth(numbers, 2));
+
+MinHeap heap = new MinHeap();
+heap.Insert(5, "1");
+heap.Insert(3, "2");
+heap.Insert(8, "3");
+heap.Insert(4, "4");
+heap.Insert(1, "5");
+heap.Insert(2, "6");
+Console.WriteLine(string.Join(",", heap.GetItems().Where(t => t != null).Select(t => t.key)));
