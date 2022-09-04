@@ -267,11 +267,22 @@
 
 // Console.WriteLine("Largest KTH: " + MaxHeap.GetLargestKth(numbers, 2));
 
-MinHeap heap = new MinHeap();
-heap.Insert(5, "1");
-heap.Insert(3, "2");
-heap.Insert(8, "3");
-heap.Insert(4, "4");
-heap.Insert(1, "5");
-heap.Insert(2, "6");
-Console.WriteLine(string.Join(",", heap.GetItems().Where(t => t != null).Select(t => t.key)));
+// MinHeap heap = new MinHeap();
+// heap.Insert(5, "1");
+// heap.Insert(3, "2");
+// heap.Insert(8, "3");
+// heap.Insert(4, "4");
+// heap.Insert(1, "5");
+// heap.Insert(2, "6");
+// Console.WriteLine(string.Join(",", heap.GetItems().Where(t => t != null).Select(t => t.key)));
+
+// MinPriorityQueue queue = new MinPriorityQueue();
+// queue.add("5", 3);
+// queue.add("3", 1);
+// queue.add("4", 2);
+
+Trie trie = new Trie();
+trie.Insert("Kaan");
+trie.Insert("Test");
+trie.Insert("Dombili");
+Console.WriteLine(trie.Contains(" "));
