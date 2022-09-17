@@ -31,7 +31,7 @@ public class HashMap
         count++;
     }
 
-    public String Get(int key)
+    public string Get(int key)
     {
         var entry = GetEntry(key);
         return entry != null ? entry.value : null;

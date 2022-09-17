@@ -281,8 +281,71 @@
 // queue.add("3", 1);
 // queue.add("4", 2);
 
-Trie trie = new Trie();
-trie.Insert("Kaan");
-trie.Insert("Test");
-trie.Insert("Dombili");
-Console.WriteLine(trie.Contains(" "));
+// Trie trie = new Trie();
+// trie.Insert("car");
+// trie.Insert("dog");
+// trie.Insert("card");
+// trie.Insert("care");
+// trie.Insert("careful");
+// trie.Insert("egg");
+// trie.Insert("kaan");
+// trie.Remove("kaan");
+// Console.WriteLine(trie.Contains("Kaan"));
+
+// var words = trie.FindWords("car");
+// Console.WriteLine(string.Join(", ", words));
+
+// Console.WriteLine($"Number of words: {trie.CountWords()}");
+
+
+// Trie trie = new Trie();
+// trie.Insert("car");
+// trie.Insert("care");
+// Console.WriteLine($"Longest Common Prefix: {trie.longestCommonPrefix()}");
+// trie.PrintWords();
+
+// Graph graph = new Graph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddNode("D");
+// graph.AddEdge("A", "C");
+// graph.AddEdge("A", "B");
+// graph.Print();
+// graph.RemoveEdge("A", "C");
+// graph.Print();
+
+
+// Graph graph = new Graph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddNode("D");
+// graph.AddEdge("A", "B");
+// graph.AddEdge("B", "D");
+// graph.AddEdge("D", "C");
+// graph.AddEdge("A", "C");
+// graph.TraverseDepthFirst("A");
+// graph.TraverseBreadthFirstIterative("A");
+//graph.TraverseDepthFirstIterative("A");
+
+// Graph graph = new Graph();
+// graph.AddNode("X");
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("P");
+// graph.AddEdge("X", "A");
+// graph.AddEdge("X", "B");
+// graph.AddEdge("A", "P");
+// graph.AddEdge("B", "P");
+// var sorted = graph.topologicalSort();
+// Console.WriteLine(string.Join(",", sorted));
+
+Graph graph = new Graph();
+graph.AddNode("A");
+graph.AddNode("B");
+graph.AddNode("C");
+graph.AddEdge("A", "B");
+graph.AddEdge("B", "C");
+graph.AddEdge("A", "C");
+Console.WriteLine("Has cycle: " + graph.HasCycle());
