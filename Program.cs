@@ -341,11 +341,69 @@
 // var sorted = graph.topologicalSort();
 // Console.WriteLine(string.Join(",", sorted));
 
-Graph graph = new Graph();
-graph.AddNode("A");
-graph.AddNode("B");
-graph.AddNode("C");
-graph.AddEdge("A", "B");
-graph.AddEdge("B", "C");
-graph.AddEdge("A", "C");
-Console.WriteLine("Has cycle: " + graph.HasCycle());
+// Graph graph = new Graph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddEdge("A", "B");
+// graph.AddEdge("B", "C");
+// graph.AddEdge("A", "C");
+// Console.WriteLine("Has cycle: " + graph.HasCycle());
+
+// WeightedGraph graph = new WeightedGraph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddEdge(from: "A", to: "B", weight: 3);
+// graph.AddEdge(from: "A", to: "C", weight: 2);
+// graph.Print();
+
+// WeightedGraph graph = new WeightedGraph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddEdge(from: "A", to: "B", weight: 1);
+// graph.AddEdge(from: "B", to: "C", weight: 2);
+// graph.AddEdge(from: "A", to: "C", weight: 10);
+// Console.WriteLine(graph.GetShortestPath(from: "A", to: "C"));
+
+// WeightedGraph graph = new WeightedGraph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddEdge(from: "A", to: "B", weight: 1);
+// graph.AddEdge(from: "B", to: "C", weight: 2);
+// graph.AddEdge(from: "C", to: "A", weight: 10);
+// Console.WriteLine(graph.HasCycle());
+
+
+// WeightedGraph graph = new WeightedGraph();
+// graph.AddNode("A");
+// graph.AddNode("B");
+// graph.AddNode("C");
+// graph.AddNode("D");
+// graph.AddEdge(from: "A", to: "B", weight: 3);
+// graph.AddEdge(from: "B", to: "D", weight: 4);
+// graph.AddEdge(from: "C", to: "D", weight: 5);
+// graph.AddEdge(from: "A", to: "C", weight: 1);
+// graph.AddEdge(from: "B", to: "C", weight: 2);
+// var tree = graph.getMinimumSpanningTree();
+// tree.Print();
+
+int[] items = new int[] { 7, 5, 2, 3, 2, 3, 1, 4 };
+
+// BubbleSort sorter = new BubbleSort();
+// sorter.Sort(items);
+// Console.WriteLine(string.Join(",", items));
+
+// SelectionSort sorter = new SelectionSort();
+// sorter.Sort(items);
+// Console.WriteLine(string.Join(",", items));
+
+// InsertionSort sorter = new InsertionSort();
+// sorter.Sort(items);
+// Console.WriteLine(string.Join(",", items));
+
+MergeSort sorter = new MergeSort();
+sorter.Sort(items);
+Console.WriteLine(string.Join(",", items));
