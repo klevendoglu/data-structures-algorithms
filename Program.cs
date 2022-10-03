@@ -390,7 +390,7 @@
 // var tree = graph.getMinimumSpanningTree();
 // tree.Print();
 
-int[] items = new int[] { 7, 5, 2, 3, 2, 3, 1, 4 };
+// int[] items = new int[] { 7, 5, 2, 3, 2, 3, 1, 4 };
 
 // BubbleSort sorter = new BubbleSort();
 // sorter.Sort(items);
@@ -404,6 +404,43 @@ int[] items = new int[] { 7, 5, 2, 3, 2, 3, 1, 4 };
 // sorter.Sort(items);
 // Console.WriteLine(string.Join(",", items));
 
-MergeSort sorter = new MergeSort();
-sorter.Sort(items);
-Console.WriteLine(string.Join(",", items));
+// MergeSort sorter = new MergeSort();
+// sorter.Sort(items);
+// Console.WriteLine(string.Join(",", items));
+
+// QuickSort sorter = new QuickSort();
+// sorter.Sort(items);
+// Console.WriteLine(string.Join(",", items));
+
+// CountingSort sorter = new CountingSort();
+// sorter.Sort(items, max: 9);
+// Console.WriteLine(string.Join(",", items));
+
+// BucketSort sorter = new BucketSort();
+// sorter.Sort(items, numberOfBuckets: 3);
+// Console.WriteLine(string.Join(",", items));
+
+// LinearSearch searcher = new LinearSearch();
+// var index = searcher.Search(items, target: 1);
+// Console.WriteLine($"found index: {index}");
+
+int[] items = new int[] { 1, 3, 4, 7, 8 };
+
+// BinarySearch searcher = new BinarySearch();
+// var index = searcher.Iterative(items, target: 2);
+// Console.WriteLine($"Iterative found index: {index}");
+
+// var index2 = searcher.Recursive(items, target: 7);
+// Console.WriteLine($"Recursive found index: {index2}");
+
+// TernarySearch searcher = new TernarySearch();
+// var index = searcher.Search(items, target: 4);
+// Console.WriteLine($"Found index: {index}");
+
+// JumpSearch searcher = new JumpSearch();
+// var index = searcher.Search(items, target: 8);
+// Console.WriteLine($"Found index: {index}");
+
+ExponentialSearch searcher = new ExponentialSearch();
+var index = searcher.Search(items, target: 7);
+Console.WriteLine($"Found index: {index}");
