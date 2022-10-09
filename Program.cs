@@ -441,6 +441,17 @@ int[] items = new int[] { 1, 3, 4, 7, 8 };
 // var index = searcher.Search(items, target: 8);
 // Console.WriteLine($"Found index: {index}");
 
-ExponentialSearch searcher = new ExponentialSearch();
-var index = searcher.Search(items, target: 7);
-Console.WriteLine($"Found index: {index}");
+// ExponentialSearch searcher = new ExponentialSearch();
+// var index = searcher.Search(items, target: 7);
+// Console.WriteLine($"Found index: {index}");
+
+// Console.WriteLine(StringUtils.CountVowels("Hello World"));
+// Console.WriteLine(StringUtils.Reverse("Hello World"));
+// Console.WriteLine(StringUtils.ReverseWords("Trees are blue"));
+// Console.WriteLine(StringUtils.AreRotations("TATAVA", "VATATA"));
+// Console.WriteLine(StringUtils.RemoveDuplicates("RATATATA"));
+// Console.WriteLine(StringUtils.GetMaxOccuringChar("Trees are beautiful"));
+// Console.WriteLine(StringUtils.capitalize("trees are beautiful"));
+// Console.WriteLine(StringUtils.areAnagrams("trees", "seert"));
+// Console.WriteLine(StringUtils.areAnagram2("trees", "seert"));
+Console.WriteLine(StringUtils.isPalindrome("kayak"));
